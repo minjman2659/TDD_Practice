@@ -7,7 +7,7 @@ class UserService {
   login(id, password) {
     if (!this.isLogedIn) {
       return this.userClient
-        .login(id, password) //
+        .login(id, password)
         .then((data) => (this.isLogedIn = true));
     }
   }
