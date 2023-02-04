@@ -1,13 +1,11 @@
-const fetchProduct = require('../async');
+const fetchProduct = require("../async");
 
-describe('Async Test', () => {
-  it('[Success] fetch return product', async () => {
-    await expect(fetchProduct(null)).resolves.toEqual({
-      item: 'Milk',
-      price: 200,
-    });
+describe("Async Test", () => {
+  it("[Success] fetch return product", async () => {
+    const data = await fetchProduct(null);
+    expect(data).toEqual({ item: "Milk", price: 200 });
   });
-  it('[Failure] fetch return network error', async () => {
-    await expect(fetchProduct('error')).rejects.toMatch('network error');
+  it("[Failure] fetch return network error", async () => {
+    await expect(fetchProduct("error")).rejects.toMatch("network error");
   });
 });

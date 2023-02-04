@@ -1,6 +1,6 @@
 class ProductClient {
   fetchItems() {
-    return fetch('http://example.com//login/id+password').then((res) =>
+    return fetch("http://example.com//login/id+password").then((res) =>
       res.json()
     );
   }
